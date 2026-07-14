@@ -86,7 +86,7 @@ walmart_project/
 
 ### Databricks Job
 
-<img width="1710" height="949" alt="databricks-job" src="https://github.com/user-attachments/assets/0e83b46b-8058-4891-9949-6fd00eec70a5" /><img width="1692" height="929" alt="architecture" src="https://github.com/user-attachments/assets/2b3bec8b-cd86-41b6-a850-0644cdb06828" />
+<img width="1710" height="949" alt="databricks-job" src="https://github.com/user-attachments/assets/0e83b46b-8058-4891-9949-6fd00eec70a5" />
 
 
 ---
