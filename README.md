@@ -1,159 +1,114 @@
-# Walmart Data Engineering Pipeline
+# Walmart Data Engineering End-to-End Project
+
+This project is my attempt to build a complete data engineering pipeline using modern tools like Databricks, dbt, Apache Airflow and AWS S3.
+
+The main goal of this project was to understand how data moves from different sources, gets transformed, validated, and finally becomes ready for analytics through an automated workflow.
+
+---
+
+## Project Architecture
+
+![Architecture](images/architecture.png)
+
+---
 
 ## About the Project
 
-This project is an end-to-end Data Engineering pipeline built using Apache Airflow, AWS S3, Databricks, dbt, Docker, Python, and SQL.
+The pipeline starts by collecting data from two different sources.
 
-The objective of this project is to automate the complete data pipeline, starting from loading raw CSV files into AWS S3 to transforming them into analytics-ready tables using the Medallion Architecture (Bronze, Silver, and Gold layers).
+- An **Agentic PostgreSQL Database**, where Change Data Capture (CDC) is used to capture database changes.
+- **AWS S3**, which stores raw files for ingestion.
 
-While working on this project, I learned how different data engineering tools work together to build scalable and automated data pipelines. It also helped me gain practical experience with workflow orchestration, data transformation, data quality testing, snapshots, and dimensional data modeling.
+The data is then loaded into **Databricks**, where incremental processing is performed. Using **dbt**, the data is transformed into clean and structured models while running data quality checks at every important stage.
+
+Finally, **Apache Airflow** orchestrates the complete workflow, making sure every step runs in the correct order automatically.
 
 ---
 
-## Technologies Used
+## Tech Stack
 
-- Apache Airflow
-- Docker
-- AWS S3
-- Databricks
-- dbt (Data Build Tool)
 - Python
 - SQL
-- Git
-- GitHub
+- Databricks
+- dbt
+- Apache Airflow
+- PostgreSQL
+- AWS S3
+- Change Data Capture (CDC)
+- Docker
+- Git & GitHub
+- VS Code
+- Ghost AI (used as a development assistant)
 
 ---
 
-## Project Workflow
+## Workflow
 
-The pipeline follows the following steps:
-
-1. Raw CSV files are uploaded to AWS S3.
-2. Apache Airflow triggers the complete workflow.
-3. Databricks loads the raw data into the Bronze layer.
-4. dbt transforms the data into the Silver Technical layer.
-5. Data quality tests are executed using dbt.
-6. Business-ready models are created in the Silver Business layer.
-7. Fact and Dimension tables are generated in the Gold layer.
-8. Snapshots are used to maintain historical records of changing data.
-
----
-
-## Features
-
-- Automated end-to-end data pipeline
-- Workflow orchestration using Apache Airflow
-- Data ingestion from AWS S3
-- Data transformation using dbt
-- Bronze, Silver and Gold architecture
-- Data quality validation
-- Source freshness checks
-- Snapshot implementation
-- Fact and Dimension data modeling
-- Docker-based development environment
-- Version control using Git and GitHub
+1. Capture data changes from the Agentic PostgreSQL Database using CDC.
+2. Load raw files from AWS S3.
+3. Perform incremental data ingestion in Databricks.
+4. Transform the data using dbt.
+5. Run automated data quality tests.
+6. Build Silver and Gold data models.
+7. Orchestrate the complete pipeline using Apache Airflow.
 
 ---
 
 ## Project Structure
 
 ```text
-airflow_dbt_project/
+airflow/
+│── dags/
+│── plugins/
+│── docker-compose.yaml
+│── Dockerfile
 
-├── dags/
-├── config/
-├── walmart_project/
-│   ├── models/
-│   ├── snapshots/
-│   ├── macros/
-│   ├── tests/
-│   └── sources/
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
-```
-
----
-
-## Architecture
-
-```
-CSV Files
-     │
-     ▼
-AWS S3
-     │
-     ▼
-Apache Airflow
-     │
-     ▼
-Databricks
-     │
-     ▼
-Bronze Layer
-     │
-     ▼
-Silver Technical Layer
-     │
-     ▼
-Silver Business Layer
-     │
-     ▼
-Gold Layer
-(Fact and Dimension Tables)
+walmart_project/
+│── models/
+│── snapshots/
+│── tests/
+│── macros/
+│── seeds/
+│── profiles.yml
 ```
 
 ---
 
 ## Screenshots
 
-The following screenshots demonstrate different stages of the project:
+### Project Architecture
 
-- Airflow DAG
-- Successful Airflow Pipeline Execution
-- AWS S3 Bucket
-- Databricks Catalog and Tables
-- dbt Lineage Graph
+![Architecture](images/architecture.png)
 
-(Add the screenshots here.)
+### Airflow DAG
+
+![Airflow DAG](images/airflow-dag.png)
+
+### Databricks Job
+
+![Databricks](images/databricks-job.png)
+
+### dbt Lineage
+
+![dbt Lineage](images/dbt-lineage.png)
 
 ---
 
 ## What I Learned
 
-Through this project, I gained practical experience with:
+Working on this project helped me understand how different tools in a modern data engineering stack work together.
 
-- Building end-to-end data pipelines
-- Workflow orchestration using Apache Airflow
-- Using Docker for project setup
-- Data ingestion using AWS S3
-- Data transformation using dbt
-- Medallion Architecture
-- Data quality testing
-- Snapshot implementation
-- Fact and Dimension modeling
-- Git and GitHub workflow
+I learned how to build an automated data pipeline, perform incremental data loading, work with CDC, transform data using dbt, validate data quality through tests, and orchestrate everything using Apache Airflow. It also gave me hands-on experience with Docker, Databricks, AWS S3, PostgreSQL and Git.
 
 ---
 
 ## Future Improvements
 
-Some improvements that can be added in the future include:
-
-- CI/CD using GitHub Actions
-- Monitoring and alerting for pipeline failures
-- Integration with BI tools for reporting
-- Deployment on cloud infrastructure
-- Support for larger datasets
+- Deploy the pipeline on cloud infrastructure.
+- Add monitoring and alerting.
+- Integrate CI/CD for automated deployments.
+- Build dashboards for analytics.
 
 ---
 
-## Author
-
-Kanishka Verma
-
-B.Tech Computer Science Engineering (AI & ML)
-
-Aspiring Data Engineer
-
+If you have any suggestions or feedback, feel free to connect with me.
