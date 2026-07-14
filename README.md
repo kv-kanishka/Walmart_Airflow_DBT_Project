@@ -1,4 +1,4 @@
-# Walmart Data Engineering End-to-End Project
+<img width="1710" height="949" alt="databricks-job" src="https://github.com/user-attachments/assets/25cffb0c-5df4-46ef-9c69-b3f9e3115544" /># Walmart Data Engineering End-to-End Project
 
 This project is my attempt to build a complete data engineering pipeline using modern tools like Databricks, dbt, Apache Airflow and AWS S3.
 
@@ -88,10 +88,6 @@ walmart_project/
 ### Databricks Job
 
 ![Databricks](images/databricks-job.png)
-
-### dbt Lineage
-
-![dbt Lineage](images/dbt-lineage.png)
 
 ---
 
