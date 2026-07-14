@@ -1,4 +1,4 @@
-<img width="1710" height="949" alt="databricks-job" src="https://github.com/user-attachments/assets/25cffb0c-5df4-46ef-9c69-b3f9e3115544" /># Walmart Data Engineering End-to-End Project
+# Walmart Data Engineering End-to-End Project
 
 This project is my attempt to build a complete data engineering pipeline using modern tools like Databricks, dbt, Apache Airflow and AWS S3.
 
@@ -8,7 +8,7 @@ The main goal of this project was to understand how data moves from different so
 
 ## Project Architecture
 
-![Architecture](images/architecture.png)
+<img width="1692" height="929" alt="architecture" src="https://github.com/user-attachments/assets/bf7be654-aff5-4323-b92d-0a7a83c9cb74" />
 
 ---
 
@@ -78,16 +78,16 @@ walmart_project/
 
 ### Project Architecture
 
-![Architecture](images/architecture.png)
+<img width="1692" height="929" alt="architecture" src="https://github.com/user-attachments/assets/30a9b704-f047-4c8b-b630-511afa8d1d7e" />
 
 ### Airflow DAG
 
-![Airflow DAG](![Uploading airflow-dag.png…]()
-)
+<img width="1708" height="947" alt="airflow-dag" src="https://github.com/user-attachments/assets/f8955e79-8206-4183-b60a-7d790d8a27ee" />
 
 ### Databricks Job
 
-![Databricks](images/databricks-job.png)
+<img width="1710" height="949" alt="databricks-job" src="https://github.com/user-attachments/assets/0e83b46b-8058-4891-9949-6fd00eec70a5" /><img width="1692" height="929" alt="architecture" src="https://github.com/user-attachments/assets/2b3bec8b-cd86-41b6-a850-0644cdb06828" />
+
 
 ---
 
@@ -103,7 +103,6 @@ I learned how to build an automated data pipeline, perform incremental data load
 
 - Deploy the pipeline on cloud infrastructure.
 - Add monitoring and alerting.
-- Integrate CI/CD for automated deployments.
 - Build dashboards for analytics.
 
 ---
