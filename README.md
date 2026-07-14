@@ -82,7 +82,8 @@ walmart_project/
 
 ### Airflow DAG
 
-![Airflow DAG](images/airflow-dag.png)
+![Airflow DAG](![Uploading airflow-dag.png…]()
+)
 
 ### Databricks Job
 
